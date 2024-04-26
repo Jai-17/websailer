@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background-color: #030014;
+}
+
+.bg-grid{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.bg-circles{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+}
+
+.bg-circles-right{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    right: 0;
+}
+
+.bg-circle {
+    width: 261px;
+    height: 336px;
+    background-color: #A43BF7;
+    border-radius: 100%;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -1;
+    filter: blur(300px);
+}
+
+.left-circle {
+    top: -150px;
+    left: 400px;
+    transform: rotate(-29.358deg);
+}
+
+.right-circle {
+    top: -150px;
+    right: 300px;
+    transform: rotate(24.052deg);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 91px;
+}
+
+.logo {
+    height: 105px;
+    width: 105px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    background: linear-gradient(180deg, #FFF, #D9E6FF80);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 32px;
+    padding: 0px;
+}
+
+.subtext{
+    color: #B6B6B6;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 32px 0;
+    padding: 0;
+}
+
+button{
+    width: 207px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(92deg, #E2BDFF, #A43BF7);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.container {
+    width: 622px;
+    height: 351px;
+    border-radius: 17px;
+    border: 1px solid #A43BF7;
+    background: #05001E;
+    margin: 0 12px;
+}
+
+.carousel-circle {
+    width: 261px;
+    height: 336px;
+    transform: rotate(-88.172deg);
+    background-color: #A43BF7;
+    border-radius: 100%;
+    opacity: 0.7;
+    position: absolute;
+    margin-top: -80px;
+    z-index: -1;
+    filter: blur(126px);
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.info {
+    padding: 40px 20px;
+    width: 312px;
+}
+
+.title {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.description {
+    color: #6C6C6C;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.color-info {
+    border-radius: 20px;
+    border: 1px solid rgba(164, 59, 247, 0.20);
+    background: linear-gradient(180deg, rgba(164, 59, 247, 0.10) 0%, rgba(3, 0, 20, 0.00) 100%);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+}
+
+.cta {
+    width: 175px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 22.5px;
+    border: 1px solid #A43BF7;
+    background: #030014;
+    font-size: 18px;
+    font-weight: 400;
+    background: linear-gradient(143deg, #E4C1FF 34.59%, #C1C1C1 65.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    align-content: center;
+}
+
+.cta-blur {
+    position: absolute;
+    margin-top: -283px;
+    filter: blur(10px);
+}
+
+footer {
+    margin-top: 100px;
+    color: #D8D8D8;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 12px;
+    padding: 0;
+}
+
+.login-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 339px;
+    height: 56px;
+    border-radius: 15px;
+    border: 1px solid #A43BF7;
+    background: #05001E;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 5px 21px;
+    margin: 7px;
+}
+
+.login-btn {
+    margin: 40px;
+}
+
+.switch {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+    color: #A43BF7;
+}
+
+.alignment {
+    margin-top: 150px;
+}

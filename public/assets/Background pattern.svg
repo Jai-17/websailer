@@ -1,0 +1,47 @@
+<svg width="1440" height="782" viewBox="0 0 1440 782" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.13" clip-path="url(#clip0_21_104)">
+<mask id="mask0_21_104" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-655" y="-1235" width="2748" height="2747">
+<rect width="2746.74" height="2746.74" transform="translate(-654.371 -1235)" fill="url(#paint0_linear_21_104)"/>
+</mask>
+<g mask="url(#mask0_21_104)">
+<g clip-path="url(#clip1_21_104)">
+<g clip-path="url(#clip2_21_104)">
+<line x1="109.566" y1="-1235" x2="109.566" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="262.163" y1="-1235" x2="262.163" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="414.76" y1="-1235" x2="414.76" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="567.357" y1="-1235" x2="567.357" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="719.954" y1="-1235" x2="719.954" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="872.55" y1="-1235" x2="872.55" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="1025.15" y1="-1235" x2="1025.15" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="1177.74" y1="-1235" x2="1177.74" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="1330.34" y1="-1235" x2="1330.34" y2="1511.74" stroke="#D0D5DD" stroke-width="1.90746"/>
+</g>
+<g clip-path="url(#clip3_21_104)">
+<line x1="-1112.16" y1="137.418" x2="2550.16" y2="137.418" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="-1112.16" y1="290.014" x2="2550.16" y2="290.014" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="-1112.16" y1="442.611" x2="2550.16" y2="442.611" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="-1112.16" y1="595.208" x2="2550.16" y2="595.208" stroke="#D0D5DD" stroke-width="1.90746"/>
+<line x1="-1112.16" y1="747.805" x2="2550.16" y2="747.805" stroke="#D0D5DD" stroke-width="1.90746"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_21_104" x1="1373.37" y1="0" x2="1373.37" y2="2746.74" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="0.991144" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_21_104">
+<rect width="4835" height="2017" fill="white" transform="translate(-1698 -1235)"/>
+</clipPath>
+<clipPath id="clip1_21_104">
+<rect width="3662.32" height="2746.74" fill="white" transform="translate(-1112.16 -1235)"/>
+</clipPath>
+<clipPath id="clip2_21_104">
+<rect width="3662.32" height="2746.74" fill="white" transform="translate(-1112.16 -1235)"/>
+</clipPath>
+<clipPath id="clip3_21_104">
+<rect width="3662.32" height="2746.74" fill="white" transform="translate(-1112.16 -1235)"/>
+</clipPath>
+</defs>
+</svg>
