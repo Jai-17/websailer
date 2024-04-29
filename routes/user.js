@@ -13,6 +13,10 @@ router.get('/signup', (req, res, next) => {
     res.render('signup');
 })
 
+router.get('/template', (req, res, next) => {
+    res.render('tempSelection');
+})
+
 router.get('/', (req, res, next) => {
     res.render('landing');
 })
