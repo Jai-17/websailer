@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebSailer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/template.css">
+</head>
+
+<body>
+    <img class="bg-grid" src="\assets\Background pattern.svg">
+    <main>
+        <div class="bg-circle left-circle"></div>
+        <div class="bg-circle right-circle"></div>
+        <nav>
+            <div class="icon-logo item">
+                <div class="logo"></div>
+                <h2>WebSailer</h2>
+            </div>
+            <div class="progress-text content item">Step 2/2</div>
+            <div class="profile item">
+                <div class="pfp"></div>
+                <p class="username">Jai</p>
+            </div>
+        </nav>
+    </main>
+    <h2 class="title">Fill in the Details</h2>
+
+    <div class="form">
+        <form>
+            <div class="form-section">
+
+                <div class="detail">
+                    <label for="productName">Product Name*</label>
+                    <input class="form-input" type="text" placeholder="WebSailer" name="productName" id="productName">
+                </div>
+
+                <div class="detail">
+                    <label for="tagline">Tagline*</label>
+                    <input class="form-input" type="text" placeholder="Sail through the net" name="tagline" id="tagline">
+                </div>
+
+                <div class="detail">
+                    <label for="description">Description*</label>
+                    <textarea id="description" name="description" placeholder="Your product description..."></textarea>
+                </div>
+
+                <div class="detail">
+                    <label for="cta">CTA Title*</label>
+                    <input class="form-input" type="text" placeholder="Get Started" name="cta" id="cta">
+                </div>
+
+                <div class="detail">
+                    <label for="link">CTA Redirect Link*</label>
+                    <input class="form-input" type="text" placeholder="Link" name="link" id="link">
+                </div>
+                
+            </div>
+
+            <div class="form-section">
+
+                <div class="detail">
+                    <label for="companyName">Company Name*</label>
+                    <input class="form-input" type="text" placeholder="Name" name="companyName" id="companyName">
+                </div>
+
+                <div class="detail text">OR/AND</div>
+
+                <div class="detail file">
+                    <label class="file-label" for="logo-img">Logo*<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image"></div></div></label>
+                    <input type="file" id="logo-img" name="logo-img" accept="image/*" class="file-input" onchange="getImage(this.value)" />
+                </div>
+
+                <div class="product-image">
+                    <div class="detail product-image-details">
+                        <label class="file-label" for="image1-img">Product image 1<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image1"></div></div></label>
+                        <input type="file" id="image1-img" name="image1-img" accept="image/*" class="file-input" onchange="getImage1(this.value)" />
+                    </div>
+                    <div class="detail product-image-details">
+                        <label for="image1-title">Image 1 title*</label>
+                        <input type="text" placeholder="Image 1" name="image1-title" id="image1-title">
+                    </div>
+                </div>
+
+                <div class="product-image">
+                    <div class="detail product-image-details">
+                        <label class="file-label" for="image2-img">Product image 2<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image2"></div></div></label>
+                        <input type="file" id="image2-img" name="image2-img" accept="image/*" class="file-input" onchange="getImage2(this.value)" />
+                    </div>
+                    <div class="detail product-image-details">
+                        <label for="image2-title">Image 2 title*</label>
+                        <input type="text" placeholder="Image 2" name="image2-title" id="image2-title">
+                    </div>
+                </div>
+
+                <div class="product-image">
+                    <div class="detail product-image-details">
+                        <label class="file-label" for="image3-img">Product image 3<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image3"></div></div></label>
+                        <input type="file" id="image3-img" name="image3-img" accept="image/*" class="file-input" onchange="getImage3(this.value)" />
+                    </div>
+                    <div class="detail product-image-details">
+                        <label for="image3-title">Image 3 title*</label>
+                        <input type="text" placeholder="Image 3" name="image3-title" id="image3-title">
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <label for="phone">Phone*</label>
+                    <input class="form-input" type="tel" placeholder="+91 9667599617" name="phone" id="phone">
+                </div>
+
+                <div class="detail">
+                    <label for="email">Email*</label>
+                    <input class="form-input" type="email" placeholder="jmadhukar_be22@thapar.edu" name="email" id="email">
+                </div>
+
+                <div class="detail">
+                    <label for="backlink">Webpage Backlink*</label>
+                    <input class="form-input" type="text" placeholder="backlink" name="backlink" id="backlink">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <form class="submit-button" action="/">
+        <button type="submit">Done</button>
+    </form>
+    
+    <script>
+        function getImage(imageName) {
+            var newimg = imageName.replace(/^.*\\/, "");
+            $('#display-image').html(newimg);
+        }
+
+        function getImage1(imageName) {
+            var newimg = imageName.replace(/^.*\\/, "");
+            $('#display-image1').html(newimg);
+        }
+
+        function getImage2(imageName) {
+            var newimg = imageName.replace(/^.*\\/, "");
+            $('#display-image2').html(newimg);
+        }
+
+        function getImage3(imageName) {
+            var newimg = imageName.replace(/^.*\\/, "");
+            $('#display-image3').html(newimg);
+        }
+    </script>
+</body>
+</html>

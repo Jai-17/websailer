@@ -17,6 +17,10 @@ router.get('/template', (req, res, next) => {
     res.render('tempSelection');
 })
 
+router.get('/details', (req, res, next) => {
+    res.render('details');
+})
+
 router.get('/', (req, res, next) => {
     res.render('landing');
 })

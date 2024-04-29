@@ -169,6 +169,106 @@ button{
 form {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 70px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.text {
+    color: #ABABAB;
+    font-size: 18px;
+    text-align: center;
+}
+
+.form-input {
+    width: 317px;
+}
+
+input {
+    height: 51px;
+    border-radius: 15px;
+    border: 1px solid #A43BF7;
+    background: #05001E;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+    padding: 5px 21px;
+}
+
+textarea {
+    width: 317px;
+    height: 251px;
+    border-radius: 15px;
+    border: 1px solid #A43BF7;
+    background: #05001E;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    align-items: center;
+    padding: 15px 21px;
+    font-family: Urbanist;
+    resize: none;
+}
+
+label {
+    color: #EEE;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.form-section {
+    margin: 0 60px;
+}
+
+.input-file {
+    height: 51px;
+    border-radius: 15px;
+    border: 1px solid #A43BF7;
+    background: #05001E;
+    padding: 5px 21px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.file-input {
+    display: none;
+    visibility: none;
+}
+
+.file-label {
+    padding-bottom: 0px;
+}
+
+.display-image {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.product-image {
+    display: flex;
+    margin: 20px 0;
+    width: 360px;
+}
+
+.product-image-details {
+    margin: 0;
+    width: 50%;
+}
+
+.product-image-details label {
+    margin-right: 15px;
+}
+
+.submit-button {
+    margin: 20px 0 50px 0;
 }
