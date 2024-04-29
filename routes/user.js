@@ -21,6 +21,10 @@ router.get('/details', (req, res, next) => {
     res.render('details');
 })
 
+router.get('/landing-page', (req, res, next) => {
+    res.render('templateOne');
+})
+
 router.get('/', (req, res, next) => {
     res.render('landing');
 })
