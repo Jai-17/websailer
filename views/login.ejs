@@ -17,11 +17,9 @@
         <div class="logo"></div>
         <h2>Welcome back!</h2>
         <p class="login-text">Login to your account</p>
-        <form class="form">
-          <input type="email" placeholder="Email address" />
-          <input type="password" placeholder="Password" />
-        </form>
-        <form action="/">
+        <form class="form" action="/login" method="POST">
+          <input type="email" placeholder="Email address" name="email" />
+          <input type="password" placeholder="Password" name="password" />
           <button class="login-btn" type="submit">Login</button>
         </form>
         <p class="switch">Don’t have an account? <a href="/signup">Sign Up</a></p>

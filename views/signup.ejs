@@ -17,12 +17,10 @@
         <div class="logo"></div>
         <h2>Hi, Welcome!</h2>
         <p class="login-text">Sign Up to create an account</p>
-        <form class="form">
-          <input type="text" placeholder="Full name" />
-          <input type="email" placeholder="Email address" />
-          <input type="password" placeholder="Password" />
-        </form>
-        <form action="/">
+        <form class="form" action="/signup" method="POST">
+          <input type="text" placeholder="Full name" name="name" />
+          <input type="email" placeholder="Email address" name="email" />
+          <input type="password" placeholder="Password" name="password" />
           <button class="login-btn" type="submit">Sign Up</button>
         </form>
         <p class="switch">Already have an account? <a href="/login">Log In</a></p>
