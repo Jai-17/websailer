@@ -22,6 +22,8 @@ app.set("views", "views");
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require('./routes/admin');
+const adminController = require('./controllers/admin');
+const isAuth = require('./middleware/is-auth');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -53,6 +55,8 @@ app.use(userRoutes);
 app.use((req, res, next) => {
   res.status(404).render("404");
 });
+
+app.get('/:backlink', isAuth, adminController.getTemplate);
 
 mongoose
   .connect(MONGODB_URI)

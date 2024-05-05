@@ -51,11 +51,13 @@ exports.postDetails = (req, res, next) => {
 exports.getTemplate = (req, res, next) => {
     const backlink = req.params.backlink;
     Template.findOne({backlink: backlink}).then(template => {
-        console.log(template);
+        if (!template) {
+          return res.status(404).render('404');
+        }
         res.render('templateOne', {
             template: template
         })
     }).catch(err => {
-        console.log(err);
+      // console.log(err);
     });
 }
