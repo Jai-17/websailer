@@ -30,7 +30,9 @@
     <h2 class="title">Fill in the Details</h2>
 
     <div class="form">
-        <form>
+        <form action="/add-template" method="POST">
+
+            <div class="input-fields">
             <div class="form-section">
 
                 <div class="detail">
@@ -67,13 +69,6 @@
                     <input class="form-input" type="text" placeholder="Name" name="companyName" id="companyName">
                 </div>
 
-                <div class="detail text">OR/AND</div>
-
-                <div class="detail file">
-                    <label class="file-label" for="logo-img">Logo*<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image"></div></div></label>
-                    <input type="file" id="logo-img" name="logo-img" accept="image/*" class="file-input" onchange="getImage(this.value)" />
-                </div>
-
                 <div class="product-image">
                     <div class="detail product-image-details">
                         <label class="file-label" for="image1-img">Product image 1<br /><div class="input-file"><img src="/assets/publish.svg"><div class="display-image" id="display-image1"></div></div></label>
@@ -81,7 +76,7 @@
                     </div>
                     <div class="detail product-image-details">
                         <label for="image1-title">Image 1 title*</label>
-                        <input type="text" placeholder="Image 1" name="image1-title" id="image1-title">
+                        <input type="text" placeholder="Image 1" name="imageOneTitle" id="image1-title">
                     </div>
                 </div>
 
@@ -92,7 +87,7 @@
                     </div>
                     <div class="detail product-image-details">
                         <label for="image2-title">Image 2 title*</label>
-                        <input type="text" placeholder="Image 2" name="image2-title" id="image2-title">
+                        <input type="text" placeholder="Image 2" name="imageTwoTitle" id="image2-title">
                     </div>
                 </div>
 
@@ -103,7 +98,7 @@
                     </div>
                     <div class="detail product-image-details">
                         <label for="image3-title">Image 3 title*</label>
-                        <input type="text" placeholder="Image 3" name="image3-title" id="image3-title">
+                        <input type="text" placeholder="Image 3" name="imageThreeTitle" id="image3-title">
                     </div>
                 </div>
 
@@ -123,12 +118,13 @@
                 </div>
 
             </div>
+        </div>
+        <div class="button-field">
+            <button type="submit">Done</button>
+        </div>
         </form>
     </div>
-
-    <form class="submit-button" action="/">
-        <button type="submit">Done</button>
-    </form>
+        
     
     <script>
         function getImage(imageName) {

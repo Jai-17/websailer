@@ -23,6 +23,27 @@ const templateSchema = new Schema({
         type: String,
         required: true
     },
+    imageOneURL: {
+        type: String,
+    },
+    imageOneTitle: {
+        type: String,
+        required: true
+    },
+    imageTwoURL: {
+        type: String,
+    },
+    imageTwoTitle: {
+        type: String,
+        required: true
+    },
+    imageThreeURL: {
+        type: String,
+    },
+    imageThreeTitle: {
+        type: String,
+        required: true
+    },
     companyName: {
         type: String,
         required: true

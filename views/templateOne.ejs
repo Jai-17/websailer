@@ -10,24 +10,24 @@
     <div class="container">
 
         <div class="header">
-            <h2 class="logo">Logo</h2>
-            <h2 class="productName">My Product Name</h2>
+            <h2 class="logo"><%= template.companyName %></h2>
+            <h2 class="productName"><%= template.productName %></h2>
         </div>
 
         <div class="main">
-            <h1 class="tagline main-item">My Product Tagline</h1>
+            <h1 class="tagline main-item"><%= template.tagline %></h1>
             <p class="description main-item">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis est, mattis sit amet scelerisque eleifend, euismod sit amet nisi. Integer elementum sem sit amet sem faucibus, non euismod velit dapibus. Proin mattis sapien sed ultricies bibendum. Nunc lacinia risus vel nunc hendrerit vestibulum.
+                <%= template.description %>
             </p>
-            <form action="/">
-                <button class="login-btn main-item" type="submit">Get Started</button>
+            <form action="/<%= template.ctaRedirect %>">
+                <button class="login-btn main-item" type="submit"><%= template.ctaTitle %></button>
             </form>
         </div>
 
         <div class="images">
-            <div class="image image1"><div class='centered-text'>Image</div></div>
-            <div class="image image2"><div class='centered-text'>Image</div></div>
-            <div class="image image3"><div class='centered-text'>Image</div></div>
+            <div class="image image1"><div class='centered-text'><%= template.imageOneTitle %></div></div>
+            <div class="image image2"><div class='centered-text'><%= template.imageTwoTitle %></div></div>
+            <div class="image image3"><div class='centered-text'><%= template.imageThreeTitle %></div></div>
         </div>
 
         <div class="footer">
