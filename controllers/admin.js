@@ -102,7 +102,7 @@ exports.getTemplate = (req, res, next) => {
 
       let editTemplate = false;
 
-      if (req.session.user._id.toString() === template.userId.toString()) {
+      if (req.session.user && req.session.user._id.toString() === template.userId.toString()) {
         editTemplate = true;
       }
 

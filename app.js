@@ -8,8 +8,9 @@ const flash = require('connect-flash');
 
 const User = require("./models/user");
 
-const MONGODB_URI =
-  "mongodb+srv://don:9707wxj6D2jP5PQC@cluster0.alvwa88.mongodb.net/websailer?retryWrites=true&w=majority&appName=Cluster0";
+require('dotenv').config();
+
+const MONGODB_URI = process.env.MONGO_URI;
 
 const app = express();
 const store = MongoDBStore({
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use('/images', express.static(path.join(__dirname, "images")));
 app.use(
   session({
-    secret: "mainhoondon",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
     store: store
@@ -61,7 +62,7 @@ mongoose
   .connect(MONGODB_URI)
   .then((result) => {
     console.log("Connected!");
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
   })
   .catch((err) => {
     console.log(err);
