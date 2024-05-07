@@ -18,6 +18,10 @@ router.post('/add-template', isAuth, adminController.postDetails);
 
 router.post('/template', isAuth, adminController.postTempSelection);
 
+router.get('/edit-template/:templateId', isAuth, adminController.getEditDetails);
+
+router.post('/edit-template', isAuth, adminController.postEditDetails)
+
 router.get('/landing-page', (req, res, next) => {
     res.render('templateTwo');
 })

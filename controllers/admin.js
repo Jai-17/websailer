@@ -3,7 +3,7 @@ const Template = require("../models/template");
 let selectedValue = 0;
 
 exports.postTempSelection = (req, res, next) => {
-   selectedValue = req.body.value;
+  selectedValue = req.body.value;
   console.log(selectedValue);
   res.redirect("/add-template");
 };
@@ -18,6 +18,7 @@ exports.getDetails = (req, res, next) => {
 
   res.render("details", {
     errorMessage: message,
+    editing: false,
   });
 };
 
@@ -99,17 +100,100 @@ exports.getTemplate = (req, res, next) => {
         return res.status(404).render("404");
       }
 
+      let editTemplate = false;
+
+      if (req.session.user._id.toString() === template.userId.toString()) {
+        editTemplate = true;
+      }
+
+      console.log(editTemplate);
+
       if (template.templateName == 1) {
         res.render("templateOne", {
           template: template,
+          editing: editTemplate,
         });
       } else if (template.templateName == 2) {
         res.render("templateTwo", {
           template: template,
+          editing: editTemplate,
         });
       }
     })
     .catch((err) => {
       console.log(err);
     });
+};
+
+exports.getEditDetails = (req, res, next) => {
+  let message = req.flash("error");
+  if (message.length > 0) {
+    message = message[0];
+  } else {
+    message = null;
+  }
+
+  const editMode = req.query.edit;
+  if (!editMode) {
+    return res.redirect("/");
+  }
+
+  const templateId = req.params.templateId;
+  Template.findById(templateId)
+    .then((template) => {
+      if (!template) {
+        return res.redirect("/");
+      }
+
+      res.render("details", {
+        editing: editMode,
+        template: template,
+        errorMessage: message,
+      });
+    })
+    .catch((err) => console.log(err));
+};
+
+exports.postEditDetails = (req, res, next) => {
+  const templateId = req.body.templateId;
+  const UpdatedproductName = req.body.productName;
+  const Updatedtagline = req.body.tagline;
+  const Updateddescription = req.body.description;
+  const UpdatedctaTitle = req.body.cta;
+  const UpdatedctaRedirect = req.body.link;
+  const UpdatedimageOneTitle = req.body.imageOneTitle;
+  const UpdatedimageOne = req.body.fileUrl1;
+  const UpdatedimageTwoTitle = req.body.imageTwoTitle;
+  const UpdatedimageTwo = req.body.fileUrl2;
+  const UpdatedimageThreeTitle = req.body.imageThreeTitle;
+  const UpdatedimageThree = req.body.fileUrl3;
+  const UpdatedcompanyName = req.body.companyName;
+  const Updatedphone = req.body.phone;
+  const Updatedemail = req.body.email;
+  const Updatedbacklink = req.body.backlink;
+
+  Template.findById(templateId)
+    .then((template) => {
+      template.productName = UpdatedproductName;
+      template.tagline = Updatedtagline;
+      template.ctaTitle = UpdatedctaTitle;
+      template.ctaRedirect = UpdatedctaRedirect;
+      template.imageOneTitle = UpdatedimageOneTitle;
+      template.imageOneURL = UpdatedimageOne;
+      template.imageTwoTitle = UpdatedimageTwoTitle;
+      template.imageTwoURL = UpdatedimageTwo;
+      template.imageThreeTitle = UpdatedimageThreeTitle;
+      template.imageThreeURL = UpdatedimageThree;
+      template.description = Updateddescription;
+      template.companyName = UpdatedcompanyName;
+      template.phone = Updatedphone;
+      template.email = Updatedemail;
+      template.backlink = Updatedbacklink;
+      return template.save();
+    })
+    .then((result) => {
+      console.log("UPDATED TEMPLATE");
+      res.redirect("/");
+    })
+    .catch((err) => console.log(err));
 };

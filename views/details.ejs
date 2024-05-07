@@ -30,7 +30,7 @@
     <h2 class="title">Fill in the Details</h2>
 
     <div class="form">
-      <form action="/add-template" method="POST">
+      <form action="/<% if (editing) { %>edit-template<% } else { %>add-template<% } %>" method="POST">
         <div class="input-fields">
           <div class="form-section">
             <div class="detail">
@@ -41,6 +41,7 @@
                 placeholder="WebSailer"
                 name="productName"
                 id="productName"
+                value="<% if (editing) { %><%= template.productName %><% } %>"
               />
             </div>
 
@@ -52,6 +53,7 @@
                 placeholder="Sail through the net"
                 name="tagline"
                 id="tagline"
+                value="<% if (editing) { %><%= template.tagline %><% } %>"
               />
             </div>
 
@@ -61,7 +63,7 @@
                 id="description"
                 name="description"
                 placeholder="Your product description..."
-              ></textarea>
+              ><% if (editing) { %><%= template.description %><% } %></textarea>
             </div>
 
             <div class="detail">
@@ -72,6 +74,7 @@
                 placeholder="Get Started"
                 name="cta"
                 id="cta"
+                value="<% if (editing) { %><%= template.ctaTitle %><% } %>"
               />
             </div>
 
@@ -83,6 +86,7 @@
                 placeholder="Link"
                 name="link"
                 id="link"
+                value="<% if (editing) { %><%= template.ctaRedirect %><% } %>"
               />
             </div>
           </div>
@@ -96,6 +100,7 @@
                 placeholder="Name"
                 name="companyName"
                 id="companyName"
+                value="<% if (editing) { %><%= template.companyName %><% } %>"
               />
             </div>
 
@@ -120,7 +125,7 @@
                   type="text"
                   name="fileUrl1"
                   id="fileUrl1"
-                  value=""
+                  value="<% if (editing) { %><%= template.imageOneURL %><% } %>"
                   hidden
                 />
               </div>
@@ -131,6 +136,7 @@
                   placeholder="Image 1"
                   name="imageOneTitle"
                   id="image1-title"
+                  value="<% if (editing) { %><%= template.imageOneTitle %><% } %>"
                 />
               </div>
             </div>
@@ -156,7 +162,7 @@
                   type="text"
                   name="fileUrl2"
                   id="fileUrl2"
-                  value=""
+                  value="<% if (editing) { %><%= template.imageTwoURL %><% } %>"
                   hidden
                 />
               </div>
@@ -167,6 +173,7 @@
                   placeholder="Image 2"
                   name="imageTwoTitle"
                   id="image2-title"
+                  value="<% if (editing) { %><%= template.imageTwoTitle %><% } %>"
                 />
               </div>
             </div>
@@ -192,7 +199,7 @@
                   type="text"
                   name="fileUrl3"
                   id="fileUrl3"
-                  value=""
+                  value="<% if (editing) { %><%= template.imageThreeURL %><% } %>"
                   hidden
                 />
               </div>
@@ -203,6 +210,7 @@
                   placeholder="Image 3"
                   name="imageThreeTitle"
                   id="image3-title"
+                  value="<% if (editing) { %><%= template.imageThreeTitle %><% } %>"
                 />
               </div>
             </div>
@@ -215,6 +223,7 @@
                 placeholder="+91 9667599617"
                 name="phone"
                 id="phone"
+                value="<% if (editing) { %><%= template.phone%><% } %>"
               />
             </div>
 
@@ -226,6 +235,7 @@
                 placeholder="jmadhukar_be22@thapar.edu"
                 name="email"
                 id="email"
+                value="<% if (editing) { %><%= template.email %><% } %>"
               />
             </div>
 
@@ -237,16 +247,20 @@
                 placeholder="backlink"
                 name="backlink"
                 id="backlink"
+                value="<% if (editing) { %><%= template.backlink %><% } %>"
               />
             </div>
           </div>
         </div>
+        <% if (editing) { %>
+          <input type="hidden" value="<%= template._id %>" name="templateId">
+        <% } %>
         <p class="image-tag"></p>
         <% if (errorMessage) { %>
           <div class="error"><%= errorMessage %></div>
         <% } %>
         <div class="button-field">
-          <button class="btn" type="submit">Done</button>
+          <button class="btn" type="submit"><% if (editing) { %>Update<% } else { %>Done<% } %></button>
         </div>
       </form>
     </div>

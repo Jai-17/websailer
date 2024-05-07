@@ -69,7 +69,11 @@
             </div>
             <div class="cta">
                 <div class="websailer-logo"></div>
-                <p class="promotion">Made with WebSailer</p>
+                <% if (editing) { %>
+                    <p class="promotion"><a href="/edit-template/<%= template._id %>?edit=true">Edit your WebSailer</a></p>
+                <% } else { %>
+                    <p class="promotion">Made with WebSailer</p>
+                <% } %>
             </div>
         </div>
 
