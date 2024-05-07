@@ -105,15 +105,17 @@ exports.getTemplate = (req, res, next) => {
       if (req.session.user && req.session.user._id.toString() === template.userId.toString()) {
         editTemplate = true;
       }
-
+      console.log(backlink);
       console.log(editTemplate);
 
       if (template.templateName == 1) {
+        console.log('Template one');
         res.render("templateOne", {
           template: template,
           editing: editTemplate,
         });
       } else if (template.templateName == 2) {
+        console.log('Template two');
         res.render("templateTwo", {
           template: template,
           editing: editTemplate,
