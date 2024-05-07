@@ -20,6 +20,9 @@
         <form class="form" action="/login" method="POST">
           <input type="email" placeholder="Email address" name="email" />
           <input type="password" placeholder="Password" name="password" />
+          <% if (errorMessage) { %>
+              <div class="error"><%= errorMessage %></div>
+          <% } %>
           <button class="login-btn" type="submit">Login</button>
         </form>
         <p class="switch">Don’t have an account? <a href="/signup">Sign Up</a></p>

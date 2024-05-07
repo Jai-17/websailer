@@ -21,6 +21,9 @@
           <input type="text" placeholder="Full name" name="name" />
           <input type="email" placeholder="Email address" name="email" />
           <input type="password" placeholder="Password" name="password" />
+          <% if (errorMessage) { %>
+            <div class="error"><%= errorMessage %></div>
+          <% } %>
           <button class="login-btn" type="submit">Sign Up</button>
         </form>
         <p class="switch">Already have an account? <a href="/login">Log In</a></p>

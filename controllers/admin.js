@@ -1,11 +1,24 @@
 const Template = require("../models/template");
 
+let selectedValue = 0;
+
 exports.postTempSelection = (req, res, next) => {
-  const selectedValue = req.body.value;
-}
+   selectedValue = req.body.value;
+  console.log(selectedValue);
+  res.redirect("/add-template");
+};
 
 exports.getDetails = (req, res, next) => {
-  res.render("details");
+  let message = req.flash("error");
+  if (message.length > 0) {
+    message = message[0];
+  } else {
+    message = null;
+  }
+
+  res.render("details", {
+    errorMessage: message,
+  });
 };
 
 exports.postDetails = (req, res, next) => {
@@ -15,7 +28,7 @@ exports.postDetails = (req, res, next) => {
   const ctaTitle = req.body.cta;
   const ctaRedirect = req.body.link;
   const imageOneTitle = req.body.imageOneTitle;
-  let imageOne = req.body.fileUrl1
+  let imageOne = req.body.fileUrl1;
   const imageTwoTitle = req.body.imageTwoTitle;
   let imageTwo = req.body.fileUrl2;
   const imageThreeTitle = req.body.imageThreeTitle;
@@ -25,61 +38,78 @@ exports.postDetails = (req, res, next) => {
   const email = req.body.email;
   const backlink = req.body.backlink;
 
-  // console.log(imageOne);
-  // const imageOneURL = imageOne.path;
-
-  if(!imageOne) {
-    imageOne = '/assets/image_1.png';
+  if (!imageOne) {
+    imageOne = "/assets/image_1.png";
   }
 
-  if(!imageTwo) {
-    imageTwo = '/assets/image_2.png';
+  if (!imageTwo) {
+    imageTwo = "/assets/image_2.png";
   }
 
-  if(!imageThree) {
-    imageThree = '/assets/image_3.png';
+  if (!imageThree) {
+    imageThree = "/assets/image_3.png";
   }
 
-  const template = new Template({
-    productName: productName,
-    tagline: tagline,
-    description: description,
-    ctaTitle: ctaTitle,
-    ctaRedirect: ctaRedirect,
-    imageOneURL: imageOne,
-    imageOneTitle: imageOneTitle,
-    imageTwoURL: imageTwo,
-    imageTwoTitle: imageTwoTitle,
-    imageThreeURL: imageThree,
-    imageThreeTitle: imageThreeTitle,
-    companyName: companyName,
-    phone: phone,
-    email: email,
-    backlink: backlink,
-    userId: req.user,
-  });
+  Template.findOne({ backlink: backlink })
+    .then((templateIndex) => {
+      if (templateIndex) {
+        console.log(templateIndex);
+        req.flash("error", "Backlink already exists");
+        return res.redirect("/add-template");
+      }
 
-  template
-    .save()
-    .then((result) => {
-      console.log("Template created");
-      res.redirect("/");
+      const template = new Template({
+        productName: productName,
+        tagline: tagline,
+        description: description,
+        ctaTitle: ctaTitle,
+        ctaRedirect: ctaRedirect,
+        imageOneURL: imageOne,
+        imageOneTitle: imageOneTitle,
+        imageTwoURL: imageTwo,
+        imageTwoTitle: imageTwoTitle,
+        imageThreeURL: imageThree,
+        imageThreeTitle: imageThreeTitle,
+        companyName: companyName,
+        phone: phone,
+        email: email,
+        backlink: backlink,
+        templateName: selectedValue,
+        userId: req.user,
+      });
+
+      template
+        .save()
+        .then((result) => {
+          console.log("Template created");
+          res.redirect("/");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+    .catch((err) => console.log(err));
+};
+
+exports.getTemplate = (req, res, next) => {
+  const backlink = req.params.backlink;
+  Template.findOne({ backlink: backlink })
+    .then((template) => {
+      if (!template) {
+        return res.status(404).render("404");
+      }
+
+      if (template.templateName == 1) {
+        res.render("templateOne", {
+          template: template,
+        });
+      } else if (template.templateName == 2) {
+        res.render("templateTwo", {
+          template: template,
+        });
+      }
     })
     .catch((err) => {
       console.log(err);
     });
 };
-
-exports.getTemplate = (req, res, next) => {
-    const backlink = req.params.backlink;
-    Template.findOne({backlink: backlink}).then(template => {
-        if (!template) {
-          return res.status(404).render('404');
-        }
-        res.render('templateOne', {
-            template: template
-        })
-    }).catch(err => {
-      console.log(err);
-    });
-}

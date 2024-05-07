@@ -160,7 +160,7 @@ section {
     margin-left: 20px;
 }
 
-button{
+.btn{
     width: 207px;
     height: 56px;
     border-radius: 12px;
@@ -170,6 +170,27 @@ button{
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+}
+
+.button-nav {
+    width: 120px;
+    height: 45px;
+    border-radius: 22.5px;
+    border: 1px solid #A43BF7;
+    background: #030014;
+    font-size: 18px;
+    font-weight: 400;
+    background: linear-gradient(143deg, #E4C1FF 34.59%, #C1C1C1 65.35%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.button-nav:hover {
+    border: 2px solid #c67bff;
 }
 
 .input-fields {
@@ -298,4 +319,19 @@ label {
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+}
+
+.error {
+    color: #fff;
+    height: 50px;
+    background: #e2bdff10;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid #2c1c38;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-self: center;
+    align-items: center;
 }

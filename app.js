@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoDBStore = require("connect-mongodb-session")(session);
+const flash = require('connect-flash');
 
 const User = require("./models/user");
 
@@ -22,8 +23,6 @@ app.use(express.json());
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require('./routes/admin');
-const adminController = require('./controllers/admin');
-const isAuth = require('./middleware/is-auth');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -36,6 +35,7 @@ app.use(
     store: store
   })
 );
+app.use(flash());
 
 app.use((req, res, next) => {
   if (!req.session.user) {

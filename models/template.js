@@ -60,6 +60,10 @@ const templateSchema = new Schema({
         type: String,
         required: true
     },
+    templateName: {
+        type: Number,
+        required: true
+    },
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User',

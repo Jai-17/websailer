@@ -21,15 +21,16 @@
         </div>
         <div class="progress-text content item">Step 2/2</div>
         <div class="profile item">
-          <div class="pfp"></div>
-          <p class="username">Jai</p>
+          <form action="/logout" method="POST" class="nav-form">
+            <button type="submit" class="button-nav">Logout</button>
+          </form>
         </div>
       </nav>
     </main>
     <h2 class="title">Fill in the Details</h2>
 
     <div class="form">
-      <form action="/add-template" method="POST" enctype="multipart/form-data">
+      <form action="/add-template" method="POST">
         <div class="input-fields">
           <div class="form-section">
             <div class="detail">
@@ -241,8 +242,11 @@
           </div>
         </div>
         <p class="image-tag"></p>
+        <% if (errorMessage) { %>
+          <div class="error"><%= errorMessage %></div>
+        <% } %>
         <div class="button-field">
-          <button type="submit">Done</button>
+          <button class="btn" type="submit">Done</button>
         </div>
       </form>
     </div>

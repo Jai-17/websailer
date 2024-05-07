@@ -253,3 +253,18 @@ a{
 .alignment {
     margin-top: 150px;
 }
+
+.error {
+    color: #fff;
+    height: 50px;
+    background: #e2bdff10;
+    margin-top: 20px;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 1px solid #2c1c38;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
