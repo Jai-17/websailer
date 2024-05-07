@@ -16,7 +16,7 @@ router.get('/add-template', isAuth, adminController.getDetails);
 
 router.post('/add-template', isAuth, adminController.postDetails);
 
-router.post('/template', isAuth, adminController.postTempSelection);
+// router.post('/template', isAuth, adminController.postTempSelection);
 
 router.get('/edit-template/:templateId', isAuth, adminController.getEditDetails);
 
