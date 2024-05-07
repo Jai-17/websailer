@@ -32,6 +32,13 @@ body {
     transform: rotate(-29.358deg);
 }
 
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .right-circle {
     top: -150px;
     right: 300px;

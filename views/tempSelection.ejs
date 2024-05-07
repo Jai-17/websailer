@@ -141,9 +141,10 @@
       </div>
     </section>
 
-    <form>
-      <button class="btn choose-btn" id="choose-btn" type="submit">Next</button>
-    </form>
+    <div class="form">
+      <button class="btn choose-btn" id="choose-btn">Next</button>
+    </div>
+    
 
     <script>
       function selectBox(element) {
@@ -176,7 +177,14 @@
           },
           body: JSON.stringify({ value: selectedValue }),
         })
-          .then((response) => console.log(response))
+          .then((response) => {
+            if (response.redirected) {
+              window.location.href = '/add-template';
+            } else {
+              console.log("Response not redirected:", response);
+              return response.json();
+            }
+          })
           .then((data) => console.log(data))
           .catch((error) => console.error("Error:", error));
       }

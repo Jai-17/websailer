@@ -12,11 +12,11 @@ router.get('/template', isAuth, (req, res, next) => {
     res.render('tempSelection');
 })
 
-router.post('/template', isAuth, adminController.postTempSelection);
-
 router.get('/add-template', isAuth, adminController.getDetails);
 
 router.post('/add-template', isAuth, adminController.postDetails);
+
+router.post('/template', isAuth, adminController.postTempSelection);
 
 router.get('/landing-page', (req, res, next) => {
     res.render('templateTwo');
