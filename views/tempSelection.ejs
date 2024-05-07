@@ -170,23 +170,27 @@
         });
 
       function sendData(selectedValue) {
-        fetch("/template", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ value: selectedValue }),
-        })
-          .then((response) => {
-            if (response.redirected) {
-              window.location.href = '/add-template';
-            } else {
-              console.log("Response not redirected:", response);
-              return response.json();
-            }
-          })
-          .then((data) => console.log(data))
-          .catch((error) => console.error("Error:", error));
+
+        localStorage.setItem("templateName", selectedValue);
+        window.location.href = '/add-template';
+
+        // fetch("/template", {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify({ value: selectedValue }),
+        // })
+          // .then((response) => {
+          //   if (response.redirected) {
+          //     window.location.href = '/add-template';
+          //   } else {
+          //     console.log("Response not redirected:", response);
+          //     return response.json();
+          //   }
+          // })
+          // .then((data) => console.log(data))
+          // .catch((error) => console.error("Error:", error));
       }
     </script>
   </body>

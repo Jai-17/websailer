@@ -1,12 +1,6 @@
 const Template = require("../models/template");
 
-let selectedValue = 0;
-
-exports.postTempSelection = (req, res, next) => {
-  selectedValue = req.body.value;
-  console.log(selectedValue);
-  res.redirect("/add-template");
-};
+// let selectedValue = 0;
 
 exports.getDetails = (req, res, next) => {
   let message = req.flash("error");
@@ -38,6 +32,7 @@ exports.postDetails = (req, res, next) => {
   const phone = req.body.phone;
   const email = req.body.email;
   const backlink = req.body.backlink;
+  const templateName = req.body.templateName;
 
   if (!imageOne) {
     imageOne = "/assets/image_1.png";
@@ -75,7 +70,7 @@ exports.postDetails = (req, res, next) => {
         phone: phone,
         email: email,
         backlink: backlink,
-        templateName: selectedValue,
+        templateName: templateName,
         userId: req.user,
       });
 

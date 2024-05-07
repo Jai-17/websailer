@@ -259,6 +259,7 @@
         <% if (errorMessage) { %>
           <div class="error"><%= errorMessage %></div>
         <% } %>
+        <input type="text" name="templateName" id="templateName" hidden>
         <div class="button-field">
           <button class="btn" type="submit"><% if (editing) { %>Update<% } else { %>Done<% } %></button>
         </div>
@@ -268,6 +269,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
     <script>
+      window.onload = () => {
+        document.getElementById('templateName').value = localStorage.getItem("templateName");
+      }
+
       function getImage(imageName) {
         var newimg = imageName.replace(/^.*\\/, "");
         $("#display-image").html(newimg);
