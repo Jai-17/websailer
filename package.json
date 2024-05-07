@@ -2,10 +2,10 @@
   "name": "websaler",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "node app.js"
+    "start": "nodemon index.js",
+    "build": "node index.js"
   },
   "author": "jai",
   "license": "ISC",
