@@ -52,7 +52,20 @@ app.use((req, res, next) => {
 
 app.use(authRoutes);
 app.use(adminRoutes);
-app.use(userRoutes);
+// app.use(userRoutes);
+
+app.get('/', (req, res, next) => {
+  let redirect;
+  if(req.session.isLoggedIn) {
+      redirect = '/template';
+  } else {
+      redirect = '/login';
+  }
+
+  res.render('landing', {
+      redirect: redirect
+  });
+})
 
 app.use((req, res, next) => {
   res.status(404).render("404");
