@@ -1,77 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WebSailer</title>
-    <link rel="stylesheet" href="/css/template.css">
-</head>
+    <link rel="stylesheet" href="/css/template.css" />
+  </head>
 
-<body>
-    <img class="bg-grid" src="\assets\Background pattern.svg">
+  <body>
+    <img class="bg-grid" src="\assets\Background pattern.svg" />
     <main>
-        <div class="bg-circle left-circle"></div>
-        <div class="bg-circle right-circle"></div>
-        <nav>
-            <div class="icon-logo item">
-                <div class="logo"></div>
-                <h2>WebSailer</h2>
-            </div>
-            <div class="progress-text content item">Step 1/2</div>
-            <div class="profile item">
-                <div class="pfp"></div>
-                <p class="username">Jai</p>
-            </div>
-        </nav>
+      <div class="bg-circle left-circle"></div>
+      <div class="bg-circle right-circle"></div>
+      <nav>
+        <div class="icon-logo item">
+          <div class="logo"></div>
+          <h2>WebSailer</h2>
+        </div>
+        <div class="progress-text content item">Step 1/2</div>
+        <div class="profile item">
+          <div class="pfp"></div>
+          <p class="username">Jai</p>
+        </div>
+      </nav>
     </main>
     <h2 class="title">Select your Template</h2>
 
     <section>
-        <div class="svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="101" height="101" viewBox="0 0 101 101" fill="none">
-            <circle cx="50.5" cy="50.5" r="30.5" fill="url(#paint0_linear_33_163)" stroke="#A43BF7" stroke-width="2"/>
-            <g style="mix-blend-mode:screen" filter="url(#filter0_f_33_163)">
-              <circle cx="50.5" cy="50.5" r="31.5" fill="url(#paint1_linear_33_163)"/>
-              <circle cx="50.5" cy="50.5" r="30.5" stroke="#C376FF" stroke-width="2"/>
-            </g>
-            <mask id="mask0_33_163" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="30" y="31" width="40" height="40">
-              <rect x="30" y="31" width="40" height="40" fill="#D9D9D9"/>
-            </mask>
-            <g mask="url(#mask0_33_163)">
-              <path d="M64.9166 68.2917L59.9999 63.375V67.0833H56.6666V57.6667H66.0833V61H62.3333L67.2499 65.9167L64.9166 68.2917ZM49.9999 67.6667C47.6944 67.6667 45.5277 67.2292 43.4999 66.3542C41.4721 65.4792 39.7083 64.2917 38.2083 62.7917C36.7083 61.2917 35.5208 59.5278 34.6458 57.5C33.7708 55.4722 33.3333 53.3056 33.3333 51C33.3333 48.6944 33.7708 46.5278 34.6458 44.5C35.5208 42.4722 36.7083 40.7083 38.2083 39.2083C39.7083 37.7083 41.4721 36.5208 43.4999 35.6458C45.5277 34.7708 47.6944 34.3333 49.9999 34.3333C52.3055 34.3333 54.4721 34.7708 56.4999 35.6458C58.5277 36.5208 60.2916 37.7083 61.7916 39.2083C63.2916 40.7083 64.4791 42.4722 65.3541 44.5C66.2291 46.5278 66.6666 48.6944 66.6666 51C66.6666 51.5556 66.6388 52.1111 66.5833 52.6667C66.5277 53.2222 66.4444 53.7778 66.3333 54.3333H62.9166C63.0555 53.7778 63.1596 53.2222 63.2291 52.6667C63.2985 52.1111 63.3333 51.5556 63.3333 51C63.3333 50.4444 63.2985 49.8889 63.2291 49.3333C63.1596 48.7778 63.0555 48.2222 62.9166 47.6667H57.2499C57.3333 48.2222 57.3958 48.7778 57.4374 49.3333C57.4791 49.8889 57.4999 50.4444 57.4999 51C57.4999 51.5556 57.4791 52.1111 57.4374 52.6667C57.3958 53.2222 57.3333 53.7778 57.2499 54.3333H53.9166C53.9999 53.7778 54.0624 53.2222 54.1041 52.6667C54.1458 52.1111 54.1666 51.5556 54.1666 51C54.1666 50.4444 54.1458 49.8889 54.1041 49.3333C54.0624 48.7778 53.9999 48.2222 53.9166 47.6667H46.0833C45.9999 48.2222 45.9374 48.7778 45.8958 49.3333C45.8541 49.8889 45.8333 50.4444 45.8333 51C45.8333 51.5556 45.8541 52.1111 45.8958 52.6667C45.9374 53.2222 45.9999 53.7778 46.0833 54.3333H51.6666V57.6667H46.8333C47.1666 58.8611 47.5971 60.0069 48.1249 61.1042C48.6527 62.2014 49.2777 63.25 49.9999 64.25C50.5555 64.25 51.111 64.2153 51.6666 64.1458C52.2221 64.0764 52.7777 64.0139 53.3333 63.9583V67.375C52.7777 67.4306 52.2221 67.4931 51.6666 67.5625C51.111 67.6319 50.5555 67.6667 49.9999 67.6667ZM37.0833 54.3333H42.7499C42.6666 53.7778 42.6041 53.2222 42.5624 52.6667C42.5208 52.1111 42.4999 51.5556 42.4999 51C42.4999 50.4444 42.5208 49.8889 42.5624 49.3333C42.6041 48.7778 42.6666 48.2222 42.7499 47.6667H37.0833C36.9444 48.2222 36.8402 48.7778 36.7708 49.3333C36.7013 49.8889 36.6666 50.4444 36.6666 51C36.6666 51.5556 36.7013 52.1111 36.7708 52.6667C36.8402 53.2222 36.9444 53.7778 37.0833 54.3333ZM38.4999 44.3333H43.4166C43.6666 43.3056 43.9791 42.2986 44.3541 41.3125C44.7291 40.3264 45.1666 39.3611 45.6666 38.4167C44.1388 38.9167 42.7638 39.6736 41.5416 40.6875C40.3194 41.7014 39.3055 42.9167 38.4999 44.3333ZM45.6666 63.5833C45.1666 62.6389 44.7291 61.6736 44.3541 60.6875C43.9791 59.7014 43.6666 58.6944 43.4166 57.6667H38.4999C39.3055 59.0833 40.3194 60.2986 41.5416 61.3125C42.7638 62.3264 44.1388 63.0833 45.6666 63.5833ZM46.8333 44.3333H53.1666C52.8333 43.1389 52.4027 41.9931 51.8749 40.8958C51.3471 39.7986 50.7221 38.75 49.9999 37.75C49.2777 38.75 48.6527 39.7986 48.1249 40.8958C47.5971 41.9931 47.1666 43.1389 46.8333 44.3333ZM56.5833 44.3333H61.4999C60.6944 42.9167 59.6805 41.7014 58.4583 40.6875C57.236 39.6736 55.861 38.9167 54.3333 38.4167C54.8333 39.3611 55.2708 40.3264 55.6458 41.3125C56.0208 42.2986 56.3333 43.3056 56.5833 44.3333Z" fill="white"/>
-            </g>
-            <defs>
-              <filter id="filter0_f_33_163" x="0.6" y="0.6" width="99.8" height="99.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                <feGaussianBlur stdDeviation="9.2" result="effect1_foregroundBlur_33_163"/>
-              </filter>
-              <linearGradient id="paint0_linear_33_163" x1="50.5" y1="19" x2="50.5" y2="82" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#E2BDFF"/>
-                <stop offset="1" stop-color="#A43BF7"/>
-              </linearGradient>
-              <linearGradient id="paint1_linear_33_163" x1="50.5" y1="19" x2="50.5" y2="82" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#BA62FF"/>
-                <stop offset="1" stop-color="#7D16CE"/>
-              </linearGradient>
-            </defs>
-          </svg>
-          </div>
+      <div class="svg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="101"
+          height="101"
+          viewBox="0 0 101 101"
+          fill="none"
+        >
+          <circle
+            cx="50.5"
+            cy="50.5"
+            r="30.5"
+            fill="url(#paint0_linear_33_163)"
+            stroke="#A43BF7"
+            stroke-width="2"
+          />
+          <g style="mix-blend-mode: screen" filter="url(#filter0_f_33_163)">
+            <circle
+              cx="50.5"
+              cy="50.5"
+              r="31.5"
+              fill="url(#paint1_linear_33_163)"
+            />
+            <circle
+              cx="50.5"
+              cy="50.5"
+              r="30.5"
+              stroke="#C376FF"
+              stroke-width="2"
+            />
+          </g>
+          <mask
+            id="mask0_33_163"
+            style="mask-type: alpha"
+            maskUnits="userSpaceOnUse"
+            x="30"
+            y="31"
+            width="40"
+            height="40"
+          >
+            <rect x="30" y="31" width="40" height="40" fill="#D9D9D9" />
+          </mask>
+          <g mask="url(#mask0_33_163)">
+            <path
+              d="M64.9166 68.2917L59.9999 63.375V67.0833H56.6666V57.6667H66.0833V61H62.3333L67.2499 65.9167L64.9166 68.2917ZM49.9999 67.6667C47.6944 67.6667 45.5277 67.2292 43.4999 66.3542C41.4721 65.4792 39.7083 64.2917 38.2083 62.7917C36.7083 61.2917 35.5208 59.5278 34.6458 57.5C33.7708 55.4722 33.3333 53.3056 33.3333 51C33.3333 48.6944 33.7708 46.5278 34.6458 44.5C35.5208 42.4722 36.7083 40.7083 38.2083 39.2083C39.7083 37.7083 41.4721 36.5208 43.4999 35.6458C45.5277 34.7708 47.6944 34.3333 49.9999 34.3333C52.3055 34.3333 54.4721 34.7708 56.4999 35.6458C58.5277 36.5208 60.2916 37.7083 61.7916 39.2083C63.2916 40.7083 64.4791 42.4722 65.3541 44.5C66.2291 46.5278 66.6666 48.6944 66.6666 51C66.6666 51.5556 66.6388 52.1111 66.5833 52.6667C66.5277 53.2222 66.4444 53.7778 66.3333 54.3333H62.9166C63.0555 53.7778 63.1596 53.2222 63.2291 52.6667C63.2985 52.1111 63.3333 51.5556 63.3333 51C63.3333 50.4444 63.2985 49.8889 63.2291 49.3333C63.1596 48.7778 63.0555 48.2222 62.9166 47.6667H57.2499C57.3333 48.2222 57.3958 48.7778 57.4374 49.3333C57.4791 49.8889 57.4999 50.4444 57.4999 51C57.4999 51.5556 57.4791 52.1111 57.4374 52.6667C57.3958 53.2222 57.3333 53.7778 57.2499 54.3333H53.9166C53.9999 53.7778 54.0624 53.2222 54.1041 52.6667C54.1458 52.1111 54.1666 51.5556 54.1666 51C54.1666 50.4444 54.1458 49.8889 54.1041 49.3333C54.0624 48.7778 53.9999 48.2222 53.9166 47.6667H46.0833C45.9999 48.2222 45.9374 48.7778 45.8958 49.3333C45.8541 49.8889 45.8333 50.4444 45.8333 51C45.8333 51.5556 45.8541 52.1111 45.8958 52.6667C45.9374 53.2222 45.9999 53.7778 46.0833 54.3333H51.6666V57.6667H46.8333C47.1666 58.8611 47.5971 60.0069 48.1249 61.1042C48.6527 62.2014 49.2777 63.25 49.9999 64.25C50.5555 64.25 51.111 64.2153 51.6666 64.1458C52.2221 64.0764 52.7777 64.0139 53.3333 63.9583V67.375C52.7777 67.4306 52.2221 67.4931 51.6666 67.5625C51.111 67.6319 50.5555 67.6667 49.9999 67.6667ZM37.0833 54.3333H42.7499C42.6666 53.7778 42.6041 53.2222 42.5624 52.6667C42.5208 52.1111 42.4999 51.5556 42.4999 51C42.4999 50.4444 42.5208 49.8889 42.5624 49.3333C42.6041 48.7778 42.6666 48.2222 42.7499 47.6667H37.0833C36.9444 48.2222 36.8402 48.7778 36.7708 49.3333C36.7013 49.8889 36.6666 50.4444 36.6666 51C36.6666 51.5556 36.7013 52.1111 36.7708 52.6667C36.8402 53.2222 36.9444 53.7778 37.0833 54.3333ZM38.4999 44.3333H43.4166C43.6666 43.3056 43.9791 42.2986 44.3541 41.3125C44.7291 40.3264 45.1666 39.3611 45.6666 38.4167C44.1388 38.9167 42.7638 39.6736 41.5416 40.6875C40.3194 41.7014 39.3055 42.9167 38.4999 44.3333ZM45.6666 63.5833C45.1666 62.6389 44.7291 61.6736 44.3541 60.6875C43.9791 59.7014 43.6666 58.6944 43.4166 57.6667H38.4999C39.3055 59.0833 40.3194 60.2986 41.5416 61.3125C42.7638 62.3264 44.1388 63.0833 45.6666 63.5833ZM46.8333 44.3333H53.1666C52.8333 43.1389 52.4027 41.9931 51.8749 40.8958C51.3471 39.7986 50.7221 38.75 49.9999 37.75C49.2777 38.75 48.6527 39.7986 48.1249 40.8958C47.5971 41.9931 47.1666 43.1389 46.8333 44.3333ZM56.5833 44.3333H61.4999C60.6944 42.9167 59.6805 41.7014 58.4583 40.6875C57.236 39.6736 55.861 38.9167 54.3333 38.4167C54.8333 39.3611 55.2708 40.3264 55.6458 41.3125C56.0208 42.2986 56.3333 43.3056 56.5833 44.3333Z"
+              fill="white"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_33_163"
+              x="0.6"
+              y="0.6"
+              width="99.8"
+              height="99.8"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="9.2"
+                result="effect1_foregroundBlur_33_163"
+              />
+            </filter>
+            <linearGradient
+              id="paint0_linear_33_163"
+              x1="50.5"
+              y1="19"
+              x2="50.5"
+              y2="82"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#E2BDFF" />
+              <stop offset="1" stop-color="#A43BF7" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_33_163"
+              x1="50.5"
+              y1="19"
+              x2="50.5"
+              y2="82"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#BA62FF" />
+              <stop offset="1" stop-color="#7D16CE" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
 
-        <div class="grid-container">
-            <div class="template"></div>
-            <div class="template"></div>
-            <div class="template"></div>
-            <div class="template"></div>
+      <div class="grid-container">
+        <div class="template" onclick="selectBox(this)">
+          <input type="hidden" value="1" />
         </div>
+        <div class="template" onclick="selectBox(this)">
+          <input type="hidden" value="2" />
+        </div>
+        <div class="template" onclick="selectBox(this)">
+          <input type="hidden" value="3" />
+        </div>
+        <div class="template" onclick="selectBox(this)">
+          <input type="hidden" value="4" />
+        </div>
+      </div>
     </section>
 
-    <form action="/">
-        <button type="submit">Next</button>
+    <form>
+      <button class="choose-btn" id="choose-btn" type="submit">Next</button>
     </form>
 
-</body>
+    <script>
+      function selectBox(element) {
+        document.querySelectorAll(".template").forEach((box) => {
+          box.classList.remove("selected");
+        });
 
+        element.classList.add("selected");
+      }
+
+      document
+        .getElementById("choose-btn")
+        .addEventListener("click", function () {
+          const selectedBox = document.querySelector(".template.selected");
+          if (selectedBox) {
+            const value = selectedBox.querySelector(
+              'input[type="hidden"]'
+            ).value;
+            sendData(value);
+          } else {
+            alert("No box selected!");
+          }
+        });
+
+      function sendData(selectedValue) {
+        fetch("/template", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ value: selectedValue }),
+        })
+          .then((response) => console.log(response))
+          .then((data) => console.log(data))
+          .catch((error) => console.error("Error:", error));
+      }
+    </script>
+  </body>
 </html>

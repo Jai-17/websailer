@@ -18,7 +18,7 @@ const store = MongoDBStore({
 
 app.set("view engine", "ejs");
 app.set("views", "views");
-
+app.use(express.json());
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require('./routes/admin');
@@ -27,6 +27,7 @@ const isAuth = require('./middleware/is-auth');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use('/images', express.static(path.join(__dirname, "images")));
 app.use(
   session({
     secret: "mainhoondon",
@@ -55,8 +56,6 @@ app.use(userRoutes);
 app.use((req, res, next) => {
   res.status(404).render("404");
 });
-
-app.get('/:backlink', isAuth, adminController.getTemplate);
 
 mongoose
   .connect(MONGODB_URI)

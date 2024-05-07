@@ -12,14 +12,16 @@ router.get('/template', isAuth, (req, res, next) => {
     res.render('tempSelection');
 })
 
+router.post('/template', isAuth, adminController.postTempSelection);
+
 router.get('/add-template', isAuth, adminController.getDetails);
 
 router.post('/add-template', isAuth, adminController.postDetails);
 
-router.get('/landing-page', isAuth, (req, res, next) => {
-    res.render('templateOne');
+router.get('/landing-page', (req, res, next) => {
+    res.render('templateTwo');
 })
 
-router.get('/:backlink', isAuth, adminController.getTemplate);
+router.get('/:backlink', adminController.getTemplate);
 
 module.exports = router;

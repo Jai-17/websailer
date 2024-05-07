@@ -144,6 +144,12 @@ section {
     transition: smooth 0.3s;
 }
 
+.template.selected {
+    border: 1px solid #A43BF7;
+    box-shadow: 0px 4px 60.8px 0px rgba(216, 166, 255, 0.20);
+    transition: smooth 0.3s;
+}
+
 .svg {
     display: flex;
     justify-content: center;
@@ -265,6 +271,10 @@ label {
     margin-left: 10px;
 }
 
+.choose-btn {
+    margin-top: 70px;
+}
+
 .product-image {
     display: flex;
     margin: 20px 0;
@@ -282,4 +292,10 @@ label {
 
 .submit-button {
     margin: 20px 0 50px 0;
+}
+
+.image-tag {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
 }

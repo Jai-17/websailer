@@ -1,5 +1,9 @@
 const Template = require("../models/template");
 
+exports.postTempSelection = (req, res, next) => {
+  const selectedValue = req.body.value;
+}
+
 exports.getDetails = (req, res, next) => {
   res.render("details");
 };
@@ -11,12 +15,30 @@ exports.postDetails = (req, res, next) => {
   const ctaTitle = req.body.cta;
   const ctaRedirect = req.body.link;
   const imageOneTitle = req.body.imageOneTitle;
+  let imageOne = req.body.fileUrl1
   const imageTwoTitle = req.body.imageTwoTitle;
+  let imageTwo = req.body.fileUrl2;
   const imageThreeTitle = req.body.imageThreeTitle;
+  let imageThree = req.body.fileUrl3;
   const companyName = req.body.companyName;
   const phone = req.body.phone;
   const email = req.body.email;
   const backlink = req.body.backlink;
+
+  // console.log(imageOne);
+  // const imageOneURL = imageOne.path;
+
+  if(!imageOne) {
+    imageOne = '/assets/image_1.png';
+  }
+
+  if(!imageTwo) {
+    imageTwo = '/assets/image_2.png';
+  }
+
+  if(!imageThree) {
+    imageThree = '/assets/image_3.png';
+  }
 
   const template = new Template({
     productName: productName,
@@ -24,11 +46,11 @@ exports.postDetails = (req, res, next) => {
     description: description,
     ctaTitle: ctaTitle,
     ctaRedirect: ctaRedirect,
-    imageOneURL: "",
+    imageOneURL: imageOne,
     imageOneTitle: imageOneTitle,
-    imageTwoURL: "",
+    imageTwoURL: imageTwo,
     imageTwoTitle: imageTwoTitle,
-    imageThreeURL: "",
+    imageThreeURL: imageThree,
     imageThreeTitle: imageThreeTitle,
     companyName: companyName,
     phone: phone,
@@ -58,6 +80,6 @@ exports.getTemplate = (req, res, next) => {
             template: template
         })
     }).catch(err => {
-      // console.log(err);
+      console.log(err);
     });
 }
