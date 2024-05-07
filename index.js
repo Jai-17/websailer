@@ -19,15 +19,18 @@ const store = MongoDBStore({
 });
 
 app.set("view engine", "ejs");
-app.set("views", "views");
+// app.set("views", "views");
+app.set('views', (__dirname + '/views'));
 app.use(express.json());
 const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const adminRoutes = require('./routes/admin');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
-app.use('/images', express.static(path.join(__dirname, "images")));
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(express.static(path.join(__dirname, "public")));
+// app.use('/images', express.static(path.join(__dirname, "images")));
+app.use(express.urlencoded({limit: '50mb', extended: true}));
+app.use(express.static(__dirname + '/public'));
 app.use(
   session({
     secret: process.env.SECRET,
