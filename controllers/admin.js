@@ -78,7 +78,7 @@ exports.postDetails = (req, res, next) => {
         .save()
         .then((result) => {
           console.log("Template created");
-          res.redirect("/");
+          res.redirect("/confirmation");
         })
         .catch((err) => {
           console.log(err);

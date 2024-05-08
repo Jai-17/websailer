@@ -58,13 +58,19 @@ main{
     margin-top: 91px;
 }
 
-.logo {
-    height: 105px;
-    width: 105px;
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    flex-shrink: 0;
+.logo-img {
+    height: 220px;
+    width: 220px;
+    margin: -60px 0;
+    padding: 0;
 }
+
+/* .logo {
+    width: 105px;
+height: 105px;
+flex-shrink: 0;
+background: red;;
+} */
 
 h1 {
     font-size: 72px;
@@ -202,7 +208,7 @@ h2 {
     color: #fff;
     font-size: 30px;
     font-weight: 600;
-    margin: 12px;
+    margin: 30px 12px 12px 12px;
     padding: 0;
 }
 

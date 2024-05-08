@@ -22,8 +22,8 @@ router.get('/edit-template/:templateId', isAuth, adminController.getEditDetails)
 
 router.post('/edit-template', isAuth, adminController.postEditDetails)
 
-router.get('/landing-page', (req, res, next) => {
-    res.render('templateTwo');
+router.get('/confirmation', isAuth, (req, res, next) => {
+    res.render('confirmation');
 })
 
 router.get('/:backlink', adminController.getTemplate);

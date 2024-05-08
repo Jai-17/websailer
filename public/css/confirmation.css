@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background-color: #030014;
+}
+
+.bg-grid{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+}
+
+.bg-circles{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+}
+
+.bg-circles-right{
+    position: absolute;
+    z-index: -1;
+    top: 200px;
+    right: 0;
+}
+
+.bg-circle {
+    width: 261px;
+    height: 336px;
+    background-color: #A43BF7;
+    border-radius: 100%;
+    opacity: 0.7;
+    position: absolute;
+    z-index: -1;
+    filter: blur(300px);
+}
+
+.left-circle {
+    top: -150px;
+    left: 400px;
+    transform: rotate(-29.358deg);
+}
+
+.right-circle {
+    top: -150px;
+    right: 300px;
+    transform: rotate(24.052deg);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 160px;
+}
+
+.logo-img {
+    margin-bottom: -40px;
+    width: 230px;
+    height: 230px;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    background: linear-gradient(180deg, #FFF, #D9E6FF80);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 25px;
+    padding: 0px;
+}
+
+p{
+    color: #B6B6B6;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 32px 0;
+    padding: 0;
+}
+
+button{
+    width: 207px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(92deg, #E2BDFF, #A43BF7);
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
